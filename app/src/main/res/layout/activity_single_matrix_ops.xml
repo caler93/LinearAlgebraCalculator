@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="@string/background"
+    tools:context=".SingleMatrixOpsActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/chalkboard_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <edu.msu.linabur3.linearalgebracalculator.SingleMatrixView
+            android:id="@+id/singleMatrixView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/rows"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/add_row"
+                    android:textAlignment="center"
+                    android:textColor="#FBFBFB" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/add_row"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#604CA13E"
+                        android:onClick="onAddRow"
+                        android:text="@string/Plus" />
+
+                    <Button
+                        android:id="@+id/remove_row"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#604CA13E"
+                        android:onClick="onRemoveRow"
+                        android:text="@string/Minus" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/columns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/add_column"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/add_column"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#604CA13E"
+                        android:onClick="onAddColumn"
+                        android:text="@string/Plus" />
+
+                    <Button
+                        android:id="@+id/remove_column"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#604CA13E"
+                        android:onClick="onRemoveColumn"
+                        android:text="@string/Minus" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/InputNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/enterNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:backgroundTint="#604CA13E"
+                    android:fontFamily="sans-serif"
+                    android:onClick="onEnterNumber"
+                    android:text="@string/enter_number"
+                    android:textAllCaps="true"
+                    app:strokeColor="#8E3434" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/computeRREF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:backgroundTint="#604CA13E"
+                        android:onClick="onComputeRREF"
+                        android:text="@string/compute_rref" />
+
+                    <Button
+                        android:id="@+id/buttonInverse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:backgroundTint="#604CA13E"
+                        android:onClick="onComputeInverse"
+                        android:text="@string/compute_inverse" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/computeDet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:backgroundTint="#604CA13E"
+                    android:onClick="onComputeDeterminant"
+                    android:text="@string/compute_determinant" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

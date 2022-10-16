@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Linear Algebra Calculator</string>
+    <string name="linear">Linear</string>
+    <string name="algebra">Algebra</string>
+    <string name="calculator">Calculator</string>
+    <string name="single">Single Matrix Operations</string>
+    <string name="background">Chalkboard Background</string>
+    <string name="input_number">Input Number</string>
+    <string name="enter_number">Enter Number</string>
+    <string name="Plus">+</string>
+    <string name="Minus">-</string>
+    <string name="add_row">Add/Remove Row:</string>
+    <string name="add_column">Add/Remove Column:</string>
+    <string name="compute_rref">Compute rref</string>
+    <string name="compute_inverse">Compute Inverse</string>
+    <string name="compute_determinant">Compute Determinant</string>
+    <string name="add_matrices">Add 2 Matrices</string>
+    <string name="multiply_matrices">Multiply 2 Matrices</string>
+</resources>
